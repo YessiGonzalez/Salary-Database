@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>CSV Parser</title>
+</head>
+
+<body>
+    <h1>Simple Salary</h1>
+
+    <div id="csv_content"></div>
+    <div id="engineer"></div>
+    <script>
+        let csv_data =
+            `Company Name Position Salary
+EMC	Software Engineer 90420
+Mathworks Software Engineer 90077
+IBM	Software Engineer 88390
+Wayfair	Software Engineer 96136
+Cisco Software Engineer 122469
+Horizon International TRD Software Engineer	74651
+TripAdvisor Software Engineer 110927
+Fujitsu	Software Engineer 110958
+Google Software Engineer 129980
+Oracle Software Engineer 111960
+Wayfair Full Stack Web Engineer	88500
+IBM	Full Stack Web Engineer	112000
+Motivis Learning Systems Full Stack Web Engineer 65000`
+
+
+
+        console.log(csv_data.split('\n'))
+
+        let rows = csv_data.split('\n')
+        console.log(rows)
+
+        console.log(csv_data.split(','))
+
+        let columns = csv_data.split(',')
+        console.log(columns)
+
+        // let sColumns = columns.split(',')
+
+        let header_string = rows[0]
+
+        let sub_columns = columns[0]
+
+        let position_value = []
+        for (let i = 0; i < rows.length; i++) {
+            if (rows[i].split(',')[1] === "Software Engineers") {
+            }
+        }
+
+        // let company_string = columns[1]
+
+        // let sColumns = company_string.split(',')
+        // console.log(sColumns)
+
+
+        document.getElementById("csv_content").innerHTML = rows
+
+        // console.log("There are " + i + "Software Engineers" === columns[1])
+        for (let i = 0; i < rows.length; i++) {
+            if (rows[i].split(',')[1] === "Software Engineers") {
+            }
+            console.log("There are " + i + "Software Engineers" === columns[1])
+        }
+        document.getElementById("engineer").innerHTML = columns
+        // console.log("There are " + i + "Software Engineers" === columns[1])
+        // console.log(csv_data.split('\n'))
+
+        // let rows = csv_data.split('\n')
+        // console.log(rows)
+
+        // // console.log(csv_data.split(','))
+
+        // // let columns = csv_data.split(',')
+        // // console.log(columns)
+
+        // let header_string = rows[0]
+        // // let company_string = columns[1]
+        // // let  = columns.split(',')
+        // document.getElementById("csv_content").innerHTML = rows[0]
+
+        // console.log("There are" + "Software Engineers" == rows[1])
+        // for (let i = 0; i < rows.length; i++) {
+        //     if (rows[i].split(',')[1] == 'Software Engineers') {
+        //     }
+        // }
+        // // document.getElementById("engineer").innerHTML = rows[0]
+    </script>
+</body>
+
+</html>
